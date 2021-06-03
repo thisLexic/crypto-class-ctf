@@ -3,8 +3,7 @@
 Sussy Curve
 
 ## Description
-There is an encrypted file: flag.pdf.enc.
-I had to decrypt it by identifying the key in the following code:
+TLDR - There is an encrypted file: flag.pdf.enc. Decrypt it using the key (finding it requires solving the problem below).
 ```python
 p = 3548190181
 E = EllipticCurve(GF(p), [0, 0])

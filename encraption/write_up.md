@@ -15,7 +15,7 @@ c = 0x7e541ac2d36e77516b6fca21c585e5eeac81c4755aefee32924c2edf58ea6be64710a054d6
 These values can be used for getting the other necessary data for decrypting.
 
 ## Insight
-The linked pdf file is extremely overwhelming: https://eprint.iacr.org/2020/1059.pdf. However, if you read the hint carefully, it simply states to implement Algorithm 1 and 2. In other words, just understand those two sections and decrypting would be easy. This makes the problem straightforward to answer once you realize you just need to implement the pseudocode into computer code.
+The linked pdf file is extremely overwhelming: https://eprint.iacr.org/2020/1059.pdf. However, if you read the hint carefully, it simply states to implement Algorithm 1 and 2. In other words, just understand those two sections and decrypting would be easy. This makes the problem straightforward to answer once you realize you just need to implement the pseudocode into, in this case, python code.
 
 ## Solution
 Based on the following given code:
@@ -70,7 +70,7 @@ def rsa_decrapt(c, N, e, p, q):
         l = (l*ge)%N
     return P
 ```
-Once P is filled with all the x, print each element out using the given int_to_ascii function:
+Once P is filled with all the x, print each element out using the given int_to_ascii function. We have to convert it to ascii because the given algorithm converted the ascii plain text into an integer through ```ascii_to_int(ptxt)```. Therefore, the flag must be converted into ascii:
 ```python
 def int_to_ascii(i):
     return unhexlify(hex(i)[2:])
